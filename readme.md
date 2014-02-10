@@ -62,17 +62,7 @@ include
             "atma": {
                 "plugins": [
                     "atma-loader-package"
-                ],
-                "settings": {
-                    "package-extension": "jsnext"
-                    // @default: "jsnext"
-                    // or define any other extension to be handled by the compiler
-                    // "js" is also possible
-
-                    "package-options": Object
-                    // @optional, @default null
-                    // any options you want to pass to the package-compiler
-                }
+                ]
             }
         }
     ```
