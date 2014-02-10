@@ -1,6 +1,7 @@
 Package Loader (Atma Plugin)
 -----
-[![Build Status](https://travis-ci.org/atmajs/atma-loader-package.png?branch=master)](https://travis-ci.org/atmajs/atma-loader-package)
+
+[![Build Status](https://travis-ci.org/tenbits/atma-loader-package.png?branch=master)](https://travis-ci.org/tenbits/atma-loader-package)
 
 The Plugin extends:
 - [`IncludeJS`](https://github.com/atmajs/IncludeJS) with a custom loader for the `Node.js` version
