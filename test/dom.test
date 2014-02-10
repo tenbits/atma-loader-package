@@ -1,0 +1,15 @@
+UTest({
+	
+	'include': function(done){
+
+		include
+			.js('./lib/.package::Lib')
+			.done(function(resp){
+
+				eq(resp.Lib.A, 'A');
+				eq(resp.Lib.B, 'B');
+				done();
+			});
+	}
+
+});
