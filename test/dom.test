@@ -8,6 +8,10 @@ UTest({
 
 				eq(resp.Lib.A, 'A');
 				eq(resp.Lib.B, 'B');
+				
+				is_(resp.Lib.C, 'Object');
+				eq_(resp.Lib.C.C, 'C');
+				
 				done();
 			});
 	}

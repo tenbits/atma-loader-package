@@ -8,9 +8,11 @@ UTest({
 			.js('lib/.package::Lib')
 			.done(function(resp){
 
-				eq(resp.Lib.A, 'A');
-				eq(resp.Lib.B, 'B');
-				eq(resp.Lib.C, 'C');
+				eq_(resp.Lib.A, 'A');
+				eq_(resp.Lib.B, 'B');
+				
+				is_(resp.Lib.C, 'Object');
+				eq_(resp.Lib.C.C, 'C');
 				done();
 			});
 	},
@@ -21,9 +23,9 @@ UTest({
 			.js('lib/*.js.package::Lib')
 			.done(function(resp){
 
-				eq(resp.Lib.A, 'A');
-				eq(resp.Lib.B, 'B');
-				eq(resp.Lib.C, null);
+				eq_(resp.Lib.A, 'A');
+				eq_(resp.Lib.B, 'B');
+				eq_(resp.Lib.C, null);
 				done();
 			});
 	},
@@ -32,7 +34,7 @@ UTest({
 		
 		var file = new io.File('./lib/.package');
 		
-		eq(file.exists(), true);
+		eq_(file.exists(), true);
 		
 		
 		var content = file.read();

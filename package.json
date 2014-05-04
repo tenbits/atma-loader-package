@@ -1,11 +1,11 @@
 {
     "name": "atma-loader-package",
-    "version": "0.0.6",
+    "version": "1.0.8",
     "description": "'Package' loader for `atma-io`, `IncludeJS` and `atma-server`.",
     "author": "Alexander Kit (alex.kit@atmajs.com)",
     "main": "index.js",
     "license": "MIT",
     "devDependencies": {
-        "atma": ">0.0.0"
+        "atma": "latest"
     }
 }

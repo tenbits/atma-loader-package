@@ -30,7 +30,7 @@ include
     .done(function(resp){
         resp.Lib.A //> Exports Object from `lib/A.js' file
         resp.Lib.B //> Exports Object from `lib/B.js' file
-        resp.Lib.foo //> Exports Object from `lib/Foo/foo.js' file
+        resp.Lib.Foo.foo //> Exports Object from `lib/Foo/foo.js' file
     });
 
 // load only root files
@@ -50,23 +50,9 @@ include
 
 ###### Embed into the Project
 
-+ add a `package.json` file to your projects root directory.
-+ `npm install atma-loader-package -save`
-+ Edit `package.json`, so that it contains at least these data:
-
-    ```json
-        {
-            "dependencies": {
-                "atma-loader-package"
-            },
-            "atma": {
-                "plugins": [
-                    "atma-loader-package"
-                ]
-            }
-        }
-    ```
-+ That's all
+- `npm install atma -g`
+- `atma plugin install atma-loader-package`
+- _That's all_
 
 ##### Quick Try
 
