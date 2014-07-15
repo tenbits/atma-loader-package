@@ -106,13 +106,16 @@ var pckg_resolveSource;
 		if (pattern)  
 			dir = dir.replace(pattern, '');
 		
+		if (dir[0] === '/') dir = dir.substring(1);
 		return new io
 			.Directory(dir)
 			.readFiles(pattern || '**.js')
 			.files
 			.map(function(file){
-				var path = file.uri.toRelativeString(dir),
-					alias = path.replace(/\..+/, '').replace(/\/+/, '.');
+				var path = file.uri.toString();
+				path = path.substring(path.indexOf(dir) + dir.length);
+
+				var alias = path.replace(/\..+/, '').replace(/\/+/, '.');
 					
 				return '"'
 					+ path
