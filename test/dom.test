@@ -1,19 +1,18 @@
 UTest({
 	
 	'include': function(done){
-
+		var start = new Date;
 		include
-			.js('./lib/.package::Lib')
+			.js('/test/lib/.package::Lib')
 			.done(function(resp){
 
 				eq(resp.Lib.A, 'A');
 				eq(resp.Lib.B, 'B');
-				
 				is_(resp.Lib.C, 'Object');
 				eq_(resp.Lib.C.C, 'C');
 				
+				console.log(new Date - start);
 				done();
 			});
 	}
-
 });

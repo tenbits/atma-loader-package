@@ -1,11 +1,10 @@
-
 var resource  = include;
 UTest({
 	
 	'include': function(done){
 
 		resource
-			.js('lib/.package::Lib')
+			.js('/test/lib/.package::Lib')
 			.done(function(resp){
 
 				eq_(resp.Lib.A, 'A');
@@ -20,7 +19,7 @@ UTest({
 	'include - root only': function(done){
 
 		resource
-			.js('lib/*.js.package::Lib')
+			.js('/test/lib/*.js.package::Lib')
 			.done(function(resp){
 
 				eq_(resp.Lib.A, 'A');
@@ -32,7 +31,7 @@ UTest({
 	
 	'io.File.read': function(){
 		
-		var file = new io.File('./lib/.package');
+		var file = new io.File('./test/lib/.package');
 		
 		eq_(file.exists(), true);
 		
